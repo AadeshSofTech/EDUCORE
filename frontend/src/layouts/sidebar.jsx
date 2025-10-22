@@ -248,7 +248,7 @@ export const Sidebar = forwardRef(({ collapsed }, ref) => {
                                                                                                     : link.label === "Subscription"
                                                                                                       ? "subscription"
                                                                                                       : link.label === "System Setting"
-                                                                                                        ? "systemsetting"
+                                                                                                        ? "systemsettings"
                                                                                                         : null;
 
                                     const isOpen = openDropdown === dropdownKey;
