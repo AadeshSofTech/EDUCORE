@@ -62,8 +62,8 @@ const FrontCMSPage = lazy(() => import("@/components/GenericPage"));
 const SubscriptionPage = lazy(() => import("@/components/GenericPage"));
 const SystemSettingsPage = lazy(() => import("@/components/GenericPage"));
 
-// ✅ FRONT OFFICE SUBPAGES
-const AdmissionEnquiryPage = lazy(() => import("@/routes/front-office/admission-enquiry"));
+// FRONT OFFICE SUBPAGES
+// const AdmissionEnquiryPage = lazy(() => import("@/routes/front-office/admission-enquiry"));
 // const VisitorsBookPage = lazy(() => import("@/routes/front-office/visitors-book"));
 // const PostalDispatchPage = lazy(() => import("@/routes/front-office/postal-dispatch"));
 // const PostalReceivePage = lazy(() => import("@/routes/front-office/postal-receive"));
@@ -87,42 +87,42 @@ const AdmissionEnquiryPage = lazy(() => import("@/routes/front-office/admission-
 // const FeesReportsPage = lazy(() => import("@/routes/fees/reports"));
 
 // --- Income Pages ---
-// import AddIncome from "@/pages/income/AddIncome";
-// import SearchIncome from "@/pages/income/SearchIncome";
-// import IncomeHead from "@/pages/income/IncomeHead";
+// import AddIncome from "@/routes/income/AddIncome";
+// import SearchIncome from "@/routes/income/SearchIncome";
+// import IncomeHead from "@/routes/income/IncomeHead";
 
 // ------- student info -------
-// import StudentAdmission from "./pages/studentInfo/StudentAdmission";
-// import OnlineAdmission from "./pages/studentInfo/OnlineAdmission";
-// import StudentDetails from "./pages/studentInfo/StudentDetails";
-// import StudentCategory from "./pages/studentInfo/StudentCategory";
-// import House from "./pages/studentInfo/House";
-// import StudentReferral from "./pages/studentInfo/StudentReferral";
-// import InactiveStudents from "./pages/studentInfo/InactiveStudents";
-// import LinkSiblings from "./pages/studentInfo/LinkSiblings";
-// import StudentUpdate from "./pages/studentInfo/StudentUpdate";
-// import StudentReports from "./pages/studentInfo/StudentReports";
+// import StudentAdmission from "@/routes/studentInfo/StudentAdmission";
+// import OnlineAdmission from "@/routes/studentInfo/OnlineAdmission";
+// import StudentDetails from "@/routes/studentInfo/StudentDetails";
+// import StudentCategory from "@/routes/studentInfo/StudentCategory";
+// import House from "@/routes/studentInfo/House";
+// import StudentReferral from "@/routes/studentInfo/StudentReferral";
+// import InactiveStudents from "@/routes/studentInfo/InactiveStudents";
+// import LinkSiblings from "@/routes/studentInfo/LinkSiblings";
+// import StudentUpdate from "@/routes/studentInfo/StudentUpdate";
+// import StudentReports from "@/routes/studentInfo/StudentReports";
 
 // Attendance Pages
 
-// import StudentAttendance from "@/pages/Attendance/StudentAttendance";
-// import StaffAttendance from "@/pages/Attendance/StaffAttendance";
-// import AttendanceType from "@/pages/Attendance/AttendanceType";
-// import AttendanceReport from "@/pages/Attendance/AttendanceReport";
+// import StudentAttendance from "@/routes/Attendance/StudentAttendance";
+// import StaffAttendance from "@/routes/Attendance/StaffAttendance";
+// import AttendanceType from "@/routes/Attendance/AttendanceType";
+// import AttendanceReport from "@/routes/Attendance/AttendanceReport";
 
 // Academics Pages
 
-// import ClassTimeTable from "@/pages/Academics/ClassTimeTable";
-// import TeacherTimetable from "@/pages/Academics/TeacherTimetable";
-// import DailyTimeTable from "@/pages/Academics/DailyTimeTable";
-// import CoCurricularSubject from "@/pages/Academics/CoCurricularSubject";
-// import Subject from "@/pages/Academics/Subject";
-// import AssignSubjects from "@/pages/Academics/AssignSubjects";
-// import StudentSubjects from "@/pages/Academics/StudentSubjects";
-// import AssignClassTeacher from "@/pages/Academics/AssignClassTeacher";
-// import Class from "@/pages/Academics/Class";
-// import Section from "@/pages/Academics/Section";
-// import PromoteStudents from "@/pages/Academics/PromoteStudents";
+// import ClassTimeTable from "@/routes/Academics/ClassTimeTable";
+// import TeacherTimetable from "@/routes/Academics/TeacherTimetable";
+// import DailyTimeTable from "@/routes/Academics/DailyTimeTable";
+// import CoCurricularSubject from "@/routes/Academics/CoCurricularSubject";
+// import Subject from "@/routes/Academics/Subject";
+// import AssignSubjects from "@/routes/Academics/AssignSubjects";
+// import StudentSubjects from "@/routes/Academics/StudentSubjects";
+// import AssignClassTeacher from "@/routes/Academics/AssignClassTeacher";
+// import Class from "@/routes/Academics/Class";
+// import Section from "@/routes/Academics/Section";
+// import PromoteStudents from "@/routes/Academics/PromoteStudents";
 
 // Examinations Pages
 // import TermList from "@/routes/examinations/term-list";
@@ -160,9 +160,9 @@ const AdmissionEnquiryPage = lazy(() => import("@/routes/front-office/admission-
 
 // Question Paper Pages
 
-// import QuestionTypePage from "@/pages/question-paper/QuestionTypePage";
-// import QuestionPage from "@/pages/question-paper/QuestionPage";
-// import GenerateQuestionPage from "@/pages/question-paper/GenerateQuestionPage";
+// import QuestionTypePage from "@/routes/question-paper/QuestionTypePage";
+// import QuestionPage from "@/routes/question-paper/QuestionPage";
+// import GenerateQuestionPage from "@/routes/question-paper/GenerateQuestionPage";
 
 // Disciplinary Pages
 
@@ -178,6 +178,159 @@ const AdmissionEnquiryPage = lazy(() => import("@/routes/front-office/admission-
 // const SyllabusPage = lazy(() => import("@/routes/download-center/syllabus"));
 // const OtherDownloadsPage = lazy(() => import("@/routes/download-center/other-downloads"));
 // const VideosPage = lazy(() => import("@/routes/download-center/videos"));
+
+// Lesson Planner Pages
+
+// import LessonPage from "@/routes/lesson-planner/lesson";
+// import TopicPage from "@/routes/lesson-planner/topic";
+// import ManageLessonPlannerPage from "@/routes/lesson-planner/manage";
+// import LessonPlannerReportPage from "@/routes/lesson-planner/lesson-report";
+// import TopicReportPage from "@/routes/lesson-planner/topic-report";
+
+// H.W. / C.W. Pages
+
+// import AddHomeworkPage from "@/routes/homework-classwork/add-homework";
+// import AddClassworkPage from "@/routes/homework-classwork/add-classwork";
+// import EvaluationReportCWPage from "@/routes/homework-classwork/evaluation-report-cw";
+// import EvaluationReportHWPage from "@/routes/homework-classwork/evaluation-report-hw";
+// import UnassignedReportPage from "@/routes/homework-classwork/unassigned-report";
+
+// Communicate Pages
+
+// import NoticeBoard from "@/routes/communicate/notice-board";
+// import SchoolDiaryPage from "@/routes/communicate/school-diary";
+// import SendEmailSMSPage from "@/routes/communicate/send-email-sms";
+
+// Human Resource Pages
+
+// import StaffDirectoryPage from "@/routes/human-resource/staff-directory";
+// import RecruitmentPage from "@/routes/human-resource/recruitment";
+// import StaffAttendancePage from "@/routes/human-resource/staff-attendance";
+// import ApplyLeavePage from "@/routes/human-resource/apply-leave";
+// import ApproveLeaveRequestPage from "@/routes/human-resource/approve-leave-request";
+// import LeaveTypePage from "@/routes/human-resource/leave-type";
+// import LeaveBalancePage from "@/routes/human-resource/leave-balance";
+// import PayrollPage from "@/routes/human-resource/payroll";
+// import StaffAdvancePage from "@/routes/human-resource/staff-advance";
+// import DepartmentPage from "@/routes/human-resource/department";
+// import DesignationPage from "@/routes/human-resource/designation";
+// import InactiveStaffPage from "@/routes/human-resource/inactive-staff";
+// import TaskPage from "@/routes/human-resource/task";
+// import HumanResourceReportsPage from "@/routes/human-resource/reports";
+
+// Inventory Pages
+
+// import ItemCategoryPage from "@/routes/inventory/item-category";
+// import ItemSubCategoryPage from "@/routes/inventory/item-sub-category";
+// import AddItemPage from "@/routes/inventory/add-item";
+// import ItemSetPage from "@/routes/inventory/item-set";
+// import ItemStorePage from "@/routes/inventory/item-store";
+// import ItemSupplierPage from "@/routes/inventory/item-supplier";
+// import AddItemStockPage from "@/routes/inventory/add-item-stock";
+// import SellItemPage from "@/routes/inventory/sell-item";
+// import IssueItemPage from "@/routes/inventory/issue-item";
+// import WorkorderPage from "@/routes/inventory/workorder";
+// import WorkorderPaymentPage from "@/routes/inventory/workorder-payment";
+// import SoldItemPaymentPage from "@/routes/inventory/sold-item-payment";
+// import InventorySalesReportPage from "@/routes/inventory/inventory-sales-report";
+// import StockReminderListPage from "@/routes/inventory/stock-reminder-list";
+// import ReturnItemPage from "@/routes/inventory/return-item";
+// import SalesReturnPage from "@/routes/inventory/sales-return";
+// import EstimatedProfitLossPage from "@/routes/inventory/estimated-profit-loss";
+// import StockHistoryPage from "@/routes/inventory/stock-history";
+
+// Library Pages
+
+// import BookListPage from "@/routes/library/book-list";
+// import IssueReturnPage from "@/routes/library/issue-return";
+// import AddStudentPage from "@/routes/library/add-student";
+// import AddStaffPage from "@/routes/library/add-staff";
+// import IssuedReturnReportPage from "@/routes/library/issued-return-report";
+
+//  Transport
+
+// import RouteVehiclePage from "@/routes/transports/RouteVehiclePage";
+// import BusStopPage from "@/routes/transports/BusStopPage";
+// import AssignTransportPage from "@/routes/transports/AssignTransportPage";
+// import ChangeBusStopPage from "@/routes/transports/ChangeBusStopPage";
+// import VehicleManagementPage from "@/routes/transports/VehicleManagementPage";
+// import VehicleDocumentsPage from "@/routes/transports/VehicleDocumentsPage";
+// import TransportReportPage from "@/routes/transports/TransportReportPage";
+
+// hostel
+
+// import RoomTypePage from "@/routes/hostel/room-type";
+// import HostelRoomsPage from "@/routes/hostel/hostel-rooms";
+// import HostelRoomsAssignPage from "@/routes/hostel/hostel-rooms-assign";
+// import ChangeHostelPage from "@/routes/hostel/change-hostel";
+// import HostelStudentDetailsPage from "@/routes/hostel/hostel-student-details";
+// import HostelVisitorsPage from "@/routes/hostel/hostel-visitors";
+// import StudentRelativesPage from "@/routes/hostel/student-relatives";
+
+// Certification Pages
+
+// import StudentCertificatesPage from "@/routes/certification/StudentCertificatesPage";
+// import StaffCertificatesPage from "@/routes/certification/StaffCertificatesPage";
+// import StudentIDCardsPage from "@/routes/certification/StudentIDCardsPage";
+// import StaffIDCardsPage from "@/routes/certification/StaffIDCardsPage";
+// import IDCardConfigurationsPage from "@/routes/certification/IDCardConfigurationsPage";
+
+// Consent Letter
+
+// import ConsentLetter from "./pages/consent/ConsentLetter";
+// import AssignConsentLetterPage from "./pages/consent/AssignConsentLetterPage";
+// import ConsentLetterReportPage from "./pages/consent/ConsentLetterReportPage";
+
+// Student wallet
+
+// import WalletPage from "./pages/studentWallet/WalletPage";
+// import WalletHistoryPage from "./pages/studentWallet/WalletHistoryPage";
+
+// Bank info
+
+// import BankPage from "./pages/bankInfo/BankPage";
+// import AccountTypePage from "./pages/bankInfo/AccountTypePage";
+// import AccountListPage from "./pages/bankInfo/AccountListPage";
+// import PassbookPage from "./pages/bankInfo/PassbookPage";
+// import PassbookReportPage from "./pages/bankInfo/PassbookReportPage";
+
+// Report Pages
+
+// import TransactionReportPage from "./pages/report/TransactionReportPage";
+// import ActivityLogPage from "./pages/report/ActivityLogPage";
+// import DocumentAvailabilityPage from "./pages/report/DocumentAvailabilityPage";
+// import AppLoginStatusPage from "./pages/report/AppLoginStatusPage";
+
+// Front CMS
+
+// import EventsPage from "@/pages/frontcms/EventsPage";
+// import GalleryPage from "@/pages/frontcms/GalleryPage";
+// import NoticePage from "@/pages/frontcms/NoticePage";
+// import MediaManagerPage from "@/pages/frontcms/MediaManagerPage";
+// import PagesPage from "@/pages/frontcms/PagesPage";
+// import MenusPage from "@/pages/frontcms/MenusPage";
+// import BannerImagePage from "@/pages/frontcms/BannerImagePage";
+// import TestimonialsPage from "@/pages/frontcms/TestimonialsPage";
+
+// Subscription
+
+// import InstallmentReportPage from "@/pages/subscription/InstallmentReportPage";
+
+// System Settings
+
+// import CustomColumnsPage from "@/pages/systemsetting/CustomColumnsPage";
+// import DocumentMasterPage from "@/pages/systemsetting/DocumentMasterPage";
+// import SessionSettingPage from "@/pages/systemsetting/SessionSettingPage";
+// import SchoolTimesPage from "@/pages/systemsetting/SchoolTimesPage";
+// import ReferralSettingPage from "@/pages/systemsetting/ReferralSettingPage";
+// import TemplateSettingPage from "@/pages/systemsetting/TemplateSettingPage";
+// import StaffTimeSlotsPage from "@/pages/systemsetting/StaffTimeSlotsPage";
+// import CommunicationSettingPage from "@/pages/systemsetting/CommunicationSettingPage";
+// import BiometricSetupPage from "@/pages/systemsetting/BiometricSetupPage";
+// import PaymentSettingPage from "@/pages/systemsetting/PaymentSettingPage";
+// import FrontCmsSettingPage from "@/pages/systemsetting/FrontCmsSettingPage";
+// import StudentDeletePage from "@/pages/systemsetting/StudentDeletePage";
+// import UsersPage from "@/pages/systemsetting/UsersPage";
 
 // Simulated authentication check
 const isAuthenticated = () => {
@@ -424,6 +577,160 @@ const router = createBrowserRouter([
                     // { path: "download-center/syllabus", element: <SyllabusPage /> },
                     // { path: "download-center/other-downloads", element: <OtherDownloadsPage /> },
                     // { path: "download-center/videos", element: <VideosPage /> },
+
+                    // ---------- Lesson Planner Sub-Routes ----------
+
+                    // { path: "/lesson-planner/lesson", element: <LessonPage /> },
+                    // { path: "/lesson-planner/topic", element: <TopicPage /> },
+                    // { path: "/lesson-planner/manage", element: <ManageLessonPlannerPage /> },
+                    // { path: "/lesson-planner/lesson-report", element: <LessonPlannerReportPage /> },
+                    // { path: "/lesson-planner/topic-report", element: <TopicReportPage /> },
+
+                    // ---------- H.W. / C.W. ----------
+
+                    // { path: "add-homework", element: <AddHomeworkPage /> },
+                    // { path: "add-classwork", element: <AddClassworkPage /> },
+                    // { path: "evaluation-report-cw", element: <EvaluationReportCWPage /> },
+                    // { path: "evaluation-report-hw", element: <EvaluationReportHWPage /> },
+                    // { path: "unassigned-report", element: <UnassignedReportPage /> },
+
+                    // ---------- Communicate ----------
+
+                    // { path: "notice-board", element: <NoticeBoard /> },
+                    // { path: "school-diary", element: <SchoolDiaryPage /> },
+                    // { path: "send-email-sms", element: <SendEmailSMSPage /> },
+
+                    // ---------- Human Resource ----------
+
+                    // { path: "staff-directory", element: <StaffDirectoryPage /> },
+                    // { path: "recruitment", element: <RecruitmentPage /> },
+                    // { path: "staff-attendance", element: <StaffAttendancePage /> },
+                    // { path: "apply-leave", element: <ApplyLeavePage /> },
+                    // { path: "approve-leave-request", element: <ApproveLeaveRequestPage /> },
+                    // { path: "leave-type", element: <LeaveTypePage /> },
+                    // { path: "leave-balance", element: <LeaveBalancePage /> },
+                    // { path: "payroll", element: <PayrollPage /> },
+                    // { path: "staff-advance", element: <StaffAdvancePage /> },
+                    // { path: "department", element: <DepartmentPage /> },
+                    // { path: "designation", element: <DesignationPage /> },
+                    // { path: "inactive-staff", element: <InactiveStaffPage /> },
+                    // { path: "task", element: <TaskPage /> },
+                    // { path: "reports", element: <HumanResourceReportsPage /> },
+
+                    // ---------- Inventory ----------
+
+                    // { path: "item-category", element: <ItemCategoryPage /> },
+                    // { path: "item-sub-category", element: <ItemSubCategoryPage /> },
+                    // { path: "add-item", element: <AddItemPage /> },
+                    // { path: "item-set", element: <ItemSetPage /> },
+                    // { path: "item-store", element: <ItemStorePage /> },
+                    // { path: "item-supplier", element: <ItemSupplierPage /> },
+                    // { path: "add-item-stock", element: <AddItemStockPage /> },
+                    // { path: "sell-item", element: <SellItemPage /> },
+                    // { path: "issue-item", element: <IssueItemPage /> },
+                    // { path: "workorder", element: <WorkorderPage /> },
+                    // { path: "workorder-payment", element: <WorkorderPaymentPage /> },
+                    // { path: "sold-item-payment", element: <SoldItemPaymentPage /> },
+                    // { path: "inventory-sales-report", element: <InventorySalesReportPage /> },
+                    // { path: "stock-reminder-list", element: <StockReminderListPage /> },
+                    // { path: "return-item", element: <ReturnItemPage /> },
+                    // { path: "sales-return", element: <SalesReturnPage /> },
+                    // { path: "estimated-profit-loss", element: <EstimatedProfitLossPage /> },
+                    // { path: "stock-history", element: <StockHistoryPage /> },
+
+                    // ---------- Library ----------
+
+                    // { path: "book-list", element: <BookListPage /> },
+                    // { path: "issue-return", element: <IssueReturnPage /> },
+                    // { path: "add-student", element: <AddStudentPage /> },
+                    // { path: "add-staff", element: <AddStaffPage /> },
+                    // { path: "issued-return-report", element: <IssuedReturnReportPage /> },
+
+                    // ---------- Transport ----------
+
+                    // { path: "transport/route-vehicle", element: <RouteVehiclePage /> },
+                    // { path: "transport/bus-stop", element: <BusStopPage /> },
+                    // { path: "transport/assign-transport", element: <AssignTransportPage /> },
+                    // { path: "transport/change-bus-stop", element: <ChangeBusStopPage /> },
+                    // { path: "transport/vehicle-management", element: <VehicleManagementPage /> },
+                    // { path: "transport/vehicle-documents", element: <VehicleDocumentsPage /> },
+                    // { path: "transport/transport-report", element: <TransportReportPage /> },
+
+                    // ---------- hostel ----------
+
+                    // { path: "hostel/hostel", element: <HostelPage /> },
+                    // { path: "hostel/room-type", element: <RoomTypePage /> },
+                    // { path: "hostel/hostel-rooms", element: <HostelRoomsPage /> },
+                    // { path: "hostel/hostel-rooms-assign", element: <HostelRoomsAssignPage /> },
+                    // { path: "hostel/change-hostel", element: <ChangeHostelPage /> },
+                    // { path: "hostel/hostel-student-details", element: <HostelStudentDetailsPage /> },
+                    // { path: "hostel/hostel-visitors", element: <HostelVisitorsPage /> },
+                    // { path: "hostel/student-relatives", element: <StudentRelativesPage /> },
+
+                    // ---------- Certificate ----------
+
+                    // { path: "certification/student-certificates", element: <StudentCertificatesPage /> },
+                    // { path: "certification/staff-certificates", element: <StaffCertificatesPage /> },
+                    // { path: "certification/student-id-cards", element: <StudentIDCardsPage /> },
+                    // { path: "certification/staff-id-cards", element: <StaffIDCardsPage /> },
+                    // { path: "certification/id-card-configurations", element: <IDCardConfigurationsPage /> },
+
+                    // ---------- Consent letter ----------
+
+                    // { path: "consent/consent-letter", element: <ConsentLetter /> },
+                    // { path: "consent/assign-consent-letter", element: <AssignConsentLetterPage /> },
+                    // { path: "consent/consent-letter-report", element: <ConsentLetterReportPage /> },
+
+                    // ---------- Student wallet ----------
+
+                    // { path: "student-wallet/wallet", element: <WalletPage /> },
+                    // { path: "student-wallet/wallet-history", element: <WalletHistoryPage /> },
+
+                    // ---------- Bank info ----------
+
+                    // { path: "bank-info/bank", element: <BankPage /> },
+                    // { path: "bank-info/account-type", element: <AccountTypePage /> },
+                    // { path: "bank-info/account-list", element: <AccountListPage /> },
+                    // { path: "bank-info/passbook", element: <PassbookPage /> },
+                    // { path: "bank-info/passbook-report", element: <PassbookReportPage /> },
+
+                    // ----------- Report ------------
+
+                    // { path: "report/transaction-report", element: <TransactionReportPage /> },
+                    // { path: "report/activity-log", element: <ActivityLogPage /> },
+                    // { path: "report/document-availability", element: <DocumentAvailabilityPage /> },
+                    // { path: "report/app-login-status", element: <AppLoginStatusPage /> },
+
+                    // ----------- Front CMS -----------
+
+                    // { path: "frontcms/events", element: <EventsPage /> },
+                    // { path: "frontcms/gallery", element: <GalleryPage /> },
+                    // { path: "frontcms/notice", element: <NoticePage /> },
+                    // { path: "frontcms/media-manager", element: <MediaManagerPage /> },
+                    // { path: "frontcms/pages", element: <PagesPage /> },
+                    // { path: "frontcms/menus", element: <MenusPage /> },
+                    // { path: "frontcms/banner-image", element: <BannerImagePage /> },
+                    // { path: "frontcms/testimonials", element: <TestimonialsPage /> },
+
+                    // -------------- Subscription --------------
+
+                    // { path: "installment-report", element: <InstallmentReportPage /> },
+
+                    // ------------- System Settings --------------
+
+                    // { path: "custom-columns", element: <CustomColumnsPage /> },
+                    // { path: "document-master", element: <DocumentMasterPage /> },
+                    // { path: "session-setting", element: <SessionSettingPage /> },
+                    // { path: "school-times", element: <SchoolTimesPage /> },
+                    // { path: "referral-setting", element: <ReferralSettingPage /> },
+                    // { path: "template-setting", element: <TemplateSettingPage /> },
+                    // { path: "staff-time-slots", element: <StaffTimeSlotsPage /> },
+                    // { path: "communication-setting", element: <CommunicationSettingPage /> },
+                    // { path: "biometric-setup", element: <BiometricSetupPage /> },
+                    // { path: "payment-setting", element: <PaymentSettingPage /> },
+                    // { path: "frontcms-setting", element: <FrontCmsSettingPage /> },
+                    // { path: "student-delete", element: <StudentDeletePage /> },
+                    // { path: "users", element: <UsersPage /> },
 
                     // Other ERP routes
                     { path: "search", element: <SearchPage /> },

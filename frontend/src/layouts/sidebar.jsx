@@ -168,6 +168,22 @@ export const Sidebar = forwardRef(({ collapsed }, ref) => {
                                         "Question Paper",
                                         "Disciplinary",
                                         "Download Center",
+                                        "Lesson Planner",
+                                        "H.W. / C.W.",
+                                        "Communicate",
+                                        "Human Resource",
+                                        "Inventory",
+                                        "Library",
+                                        "Transport",
+                                        "Hostel",
+                                        "Certificate",
+                                        "Consent Letter",
+                                        "Student Wallet",
+                                        "Bank Info",
+                                        "Report",
+                                        "Front CMS",
+                                        "Subscription",
+                                        "System Setting",
                                     ].includes(link.label)
                                 ) {
                                     const dropdownKey =
@@ -199,7 +215,41 @@ export const Sidebar = forwardRef(({ collapsed }, ref) => {
                                                                     ? "disciplinary"
                                                                     : link.label === "Download Center"
                                                                       ? "downloadCenter"
-                                                                      : null;
+                                                                      : link.label === "Lesson Planner"
+                                                                        ? "lessonPlanner"
+                                                                        : link.label === "Lesson Planner"
+                                                                          ? "lessonPlanner"
+                                                                          : link.label === "H.W. / C.W."
+                                                                            ? "hwcw"
+                                                                            : link.label === "Communicate"
+                                                                              ? "communicate"
+                                                                              : link.label === "Human Resource"
+                                                                                ? "humanResource"
+                                                                                : link.label === "Inventory"
+                                                                                  ? "inventory"
+                                                                                  : link.label === "Library"
+                                                                                    ? "library"
+                                                                                    : link.label === "Transport"
+                                                                                      ? "transport"
+                                                                                      : link.label === "Hostel"
+                                                                                        ? "hostel"
+                                                                                        : link.label === "Certificate"
+                                                                                          ? "certificate"
+                                                                                          : link.label === "Consent Letter"
+                                                                                            ? "consent"
+                                                                                            : link.label === "Student Wallet"
+                                                                                              ? "studentWallet"
+                                                                                              : link.label === "Bank Info"
+                                                                                                ? "bankInfo"
+                                                                                                : link.label === "Report"
+                                                                                                  ? "report"
+                                                                                                  : link.label === "Front CMS"
+                                                                                                    ? "frontCMS"
+                                                                                                    : link.label === "Subscription"
+                                                                                                      ? "subscription"
+                                                                                                      : link.label === "System Setting"
+                                                                                                        ? "systemsetting"
+                                                                                                        : null;
 
                                     const isOpen = openDropdown === dropdownKey;
 
@@ -628,6 +678,487 @@ export const Sidebar = forwardRef(({ collapsed }, ref) => {
                                                                 { path: "/download-center/syllabus", name: "Syllabus" },
                                                                 { path: "/download-center/other-downloads", name: "Other Downloads" },
                                                                 { path: "/download-center/videos", name: "Videos" },
+                                                            ].map((item) => (
+                                                                <NavLink
+                                                                    key={item.path}
+                                                                    to={item.path}
+                                                                    className={({ isActive }) =>
+                                                                        cn(
+                                                                            "submenu-link block rounded-md px-3 py-2 text-sm transition-all",
+                                                                            isActive || isSubActive(item.path)
+                                                                                ? "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                                                                                : "text-gray-600 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-blue-400",
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    {item.name}
+                                                                </NavLink>
+                                                            ))}
+                                                        </>
+                                                    )}
+
+                                                    {/* 📘 Lesson Planner */}
+                                                    {dropdownKey === "lessonPlanner" && (
+                                                        <>
+                                                            {[
+                                                                { path: "/lesson-planner/lesson", name: "Lesson" },
+                                                                { path: "/lesson-planner/topic", name: "Topic" },
+                                                                { path: "/lesson-planner/manage", name: "Manage Lesson Planner" },
+                                                                { path: "/lesson-planner/lesson-report", name: "Lesson Planner Report" },
+                                                                { path: "/lesson-planner/topic-report", name: "Topic Report" },
+                                                            ].map((item) => (
+                                                                <NavLink
+                                                                    key={item.path}
+                                                                    to={item.path}
+                                                                    className={({ isActive }) =>
+                                                                        cn(
+                                                                            "submenu-link block rounded-md px-3 py-2 text-sm transition-all",
+                                                                            isActive || isSubActive(item.path)
+                                                                                ? "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                                                                                : "text-gray-600 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-blue-400",
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    {item.name}
+                                                                </NavLink>
+                                                            ))}
+                                                        </>
+                                                    )}
+
+                                                    {/* 🧾 H.W. / C.W. */}
+                                                    {dropdownKey === "hwcw" && (
+                                                        <>
+                                                            {[
+                                                                { path: "/hw-cw/add-homework", name: "Add Homework" },
+                                                                { path: "/hw-cw/add-classwork", name: "Add Classwork" },
+                                                                { path: "/hw-cw/evaluation-report-cw", name: "Evaluation Report C.W" },
+                                                                { path: "/hw-cw/evaluation-report-hw", name: "Evaluation Report H.W." },
+                                                                { path: "/hw-cw/unassigned-report", name: "Unassigned Report" },
+                                                            ].map((item) => (
+                                                                <NavLink
+                                                                    key={item.path}
+                                                                    to={item.path}
+                                                                    className={({ isActive }) =>
+                                                                        cn(
+                                                                            "submenu-link block rounded-md px-3 py-2 text-sm transition-all",
+                                                                            isActive || isSubActive(item.path)
+                                                                                ? "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                                                                                : "text-gray-600 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-blue-400",
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    {item.name}
+                                                                </NavLink>
+                                                            ))}
+                                                        </>
+                                                    )}
+
+                                                    {/* 📢 Communicate Dropdown */}
+                                                    {dropdownKey === "communicate" && (
+                                                        <>
+                                                            {[
+                                                                { path: "/communicate/notice-board", name: "Notice Board" },
+                                                                { path: "/communicate/school-diary", name: "School Diary" },
+                                                                { path: "/communicate/send-email-sms", name: "Send Email / SMS" },
+                                                            ].map((item) => (
+                                                                <NavLink
+                                                                    key={item.path}
+                                                                    to={item.path}
+                                                                    className={({ isActive }) =>
+                                                                        cn(
+                                                                            "submenu-link block rounded-md px-3 py-2 text-sm transition-all",
+                                                                            isActive || isSubActive(item.path)
+                                                                                ? "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                                                                                : "text-gray-600 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-blue-400",
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    {item.name}
+                                                                </NavLink>
+                                                            ))}
+                                                        </>
+                                                    )}
+
+                                                    {/* 👥 Human Resource Dropdown */}
+                                                    {dropdownKey === "humanResource" && (
+                                                        <>
+                                                            {[
+                                                                { path: "/human-resource/staff-directory", name: "Staff Directory" },
+                                                                { path: "/human-resource/recruitment", name: "Recruitment" },
+                                                                { path: "/human-resource/staff-attendance", name: "Staff Attendance" },
+                                                                { path: "/human-resource/apply-leave", name: "Apply Leave" },
+                                                                { path: "/human-resource/approve-leave-request", name: "Approve Leave Request" },
+                                                                { path: "/human-resource/leave-type", name: "Leave Type" },
+                                                                { path: "/human-resource/leave-balance", name: "Leave Balance" },
+                                                                { path: "/human-resource/payroll", name: "Payroll" },
+                                                                { path: "/human-resource/staff-advance", name: "Staff Advance" },
+                                                                { path: "/human-resource/department", name: "Department" },
+                                                                { path: "/human-resource/designation", name: "Designation" },
+                                                                { path: "/human-resource/inactive-staff", name: "Inactive Staff" },
+                                                                { path: "/human-resource/task", name: "Task" },
+                                                                { path: "/human-resource/reports", name: "Human Resource Reports" },
+                                                            ].map((item) => (
+                                                                <NavLink
+                                                                    key={item.path}
+                                                                    to={item.path}
+                                                                    className={({ isActive }) =>
+                                                                        cn(
+                                                                            "submenu-link block rounded-md px-3 py-2 text-sm transition-all",
+                                                                            isActive || isSubActive(item.path)
+                                                                                ? "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                                                                                : "text-gray-600 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-blue-400",
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    {item.name}
+                                                                </NavLink>
+                                                            ))}
+                                                        </>
+                                                    )}
+
+                                                    {/* 📦 Inventory Dropdown */}
+                                                    {dropdownKey === "inventory" && (
+                                                        <>
+                                                            {[
+                                                                { path: "/inventory/item-category", name: "Item Category" },
+                                                                { path: "/inventory/item-sub-category", name: "Item Sub Category" },
+                                                                { path: "/inventory/add-item", name: "Add Item" },
+                                                                { path: "/inventory/item-set", name: "Item Set" },
+                                                                { path: "/inventory/item-store", name: "Item Store" },
+                                                                { path: "/inventory/item-supplier", name: "Item Supplier" },
+                                                                { path: "/inventory/add-item-stock", name: "Add Item Stock" },
+                                                                { path: "/inventory/sell-item", name: "Sell Item" },
+                                                                { path: "/inventory/issue-item", name: "Issue Item" },
+                                                                { path: "/inventory/workorder", name: "Workorder" },
+                                                                { path: "/inventory/workorder-payment", name: "Workorder Payment" },
+                                                                { path: "/inventory/sold-item-payment", name: "Sold Item Payment" },
+                                                                { path: "/inventory/inventory-sales-report", name: "Inventory Sales Report" },
+                                                                { path: "/inventory/stock-reminder-list", name: "Stock Reminder List" },
+                                                                { path: "/inventory/return-item", name: "Return Item" },
+                                                                { path: "/inventory/sales-return", name: "Sales Return" },
+                                                                { path: "/inventory/estimated-profit-loss", name: "Estimated Profit & Loss" },
+                                                                { path: "/inventory/stock-history", name: "Stock History" },
+                                                            ].map((item) => (
+                                                                <NavLink
+                                                                    key={item.path}
+                                                                    to={item.path}
+                                                                    className={({ isActive }) =>
+                                                                        cn(
+                                                                            "submenu-link block rounded-md px-3 py-2 text-sm transition-all",
+                                                                            isActive || isSubActive(item.path)
+                                                                                ? "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                                                                                : "text-gray-600 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-blue-400",
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    {item.name}
+                                                                </NavLink>
+                                                            ))}
+                                                        </>
+                                                    )}
+
+                                                    {/* 📚 Library Dropdown */}
+                                                    {dropdownKey === "library" && (
+                                                        <>
+                                                            {[
+                                                                { path: "/library/book-list", name: "Book List" },
+                                                                { path: "/library/issue-return", name: "Issue / Return" },
+                                                                { path: "/library/add-student", name: "Add Student" },
+                                                                { path: "/library/add-staff", name: "Add Staff" },
+                                                                { path: "/library/issued-return-report", name: "Issued Return Report" },
+                                                            ].map((item) => (
+                                                                <NavLink
+                                                                    key={item.path}
+                                                                    to={item.path}
+                                                                    className={({ isActive }) =>
+                                                                        cn(
+                                                                            "submenu-link block rounded-md px-3 py-2 text-sm transition-all",
+                                                                            isActive || isSubActive(item.path)
+                                                                                ? "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                                                                                : "text-gray-600 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-blue-400",
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    {item.name}
+                                                                </NavLink>
+                                                            ))}
+                                                        </>
+                                                    )}
+
+                                                    {/* 🚍 Transport Dropdown */}
+                                                    {dropdownKey === "transport" && (
+                                                        <>
+                                                            {[
+                                                                { path: "/transport/route-vehicle", name: "Route & Vehicle" },
+                                                                { path: "/transport/bus-stop", name: "Bus Stop" },
+                                                                { path: "/transport/assign-transport", name: "Assign Transport" },
+                                                                { path: "/transport/change-bus-stop", name: "Change Bus Stop" },
+                                                                { path: "/transport/vehicle-management", name: "Vehicle Management" },
+                                                                { path: "/transport/vehicle-documents", name: "Vehicle Documents" },
+                                                                { path: "/transport/transport-report", name: "Transport Report" },
+                                                            ].map((item) => (
+                                                                <NavLink
+                                                                    key={item.path}
+                                                                    to={item.path}
+                                                                    className={({ isActive }) =>
+                                                                        cn(
+                                                                            "submenu-link block rounded-md px-3 py-2 text-sm transition-all",
+                                                                            isActive || isSubActive(item.path)
+                                                                                ? "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                                                                                : "text-gray-600 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-blue-400",
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    {item.name}
+                                                                </NavLink>
+                                                            ))}
+                                                        </>
+                                                    )}
+
+                                                    {/* 🏨 Hostel Dropdown */}
+                                                    {dropdownKey === "hostel" && (
+                                                        <>
+                                                            {[
+                                                                { path: "/hostel/hostel", name: "Hostel" },
+                                                                { path: "/hostel/room-type", name: "Room Type" },
+                                                                { path: "/hostel/hostel-rooms", name: "Hostel Rooms" },
+                                                                { path: "/hostel/hostel-rooms-assign", name: "Hostel Rooms Assign" },
+                                                                { path: "/hostel/change-hostel", name: "Change Hostel" },
+                                                                { path: "/hostel/hostel-student-details", name: "Hostel Student Details" },
+                                                                { path: "/hostel/hostel-visitors", name: "Hostel Visitors" },
+                                                                { path: "/hostel/student-relatives", name: "Student Relatives" },
+                                                            ].map((item) => (
+                                                                <NavLink
+                                                                    key={item.path}
+                                                                    to={item.path}
+                                                                    className={({ isActive }) =>
+                                                                        cn(
+                                                                            "submenu-link block rounded-md px-3 py-2 text-sm transition-all",
+                                                                            isActive || isSubActive(item.path)
+                                                                                ? "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                                                                                : "text-gray-600 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-blue-400",
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    {item.name}
+                                                                </NavLink>
+                                                            ))}
+                                                        </>
+                                                    )}
+
+                                                    {/* 👨‍🎓 Certification Dropdown */}
+                                                    {dropdownKey === "certificate" && (
+                                                        <>
+                                                            {[
+                                                                { path: "/certification/student-certificates", name: "Student Certificates" },
+                                                                { path: "/certification/staff-certificates", name: "Staff Certificates" },
+                                                                { path: "/certification/student-id-cards", name: "Student ID Cards" },
+                                                                { path: "/certification/staff-id-cards", name: "Staff ID Cards" },
+                                                                { path: "/certification/id-card-configurations", name: "ID Card Configurations" },
+                                                            ].map((item) => (
+                                                                <NavLink
+                                                                    key={item.path}
+                                                                    to={item.path}
+                                                                    className={({ isActive }) =>
+                                                                        cn(
+                                                                            "submenu-link block rounded-md px-3 py-2 text-sm transition-all",
+                                                                            isActive || isSubActive(item.path)
+                                                                                ? "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                                                                                : "text-gray-600 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-blue-400",
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    {item.name}
+                                                                </NavLink>
+                                                            ))}
+                                                        </>
+                                                    )}
+
+                                                    {/* 📝 Consent Letter Dropdown */}
+
+                                                    {dropdownKey === "consent" && (
+                                                        <>
+                                                            {[
+                                                                { path: "/consent/consent-letter", name: "Consent Letter" },
+                                                                { path: "/consent/assign-consent-letter", name: "Assign Consent Letter" },
+                                                                { path: "/consent/consent-letter-report", name: "Consent Letter Report" },
+                                                            ].map((item) => (
+                                                                <NavLink
+                                                                    key={item.path}
+                                                                    to={item.path}
+                                                                    className={({ isActive }) =>
+                                                                        cn(
+                                                                            "submenu-link block rounded-md px-3 py-2 text-sm transition-all",
+                                                                            isActive || isSubActive(item.path)
+                                                                                ? "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                                                                                : "text-gray-600 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-blue-400",
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    {item.name}
+                                                                </NavLink>
+                                                            ))}
+                                                        </>
+                                                    )}
+
+                                                    {/* 💰 Student Wallet Dropdown */}
+
+                                                    {dropdownKey === "studentWallet" && (
+                                                        <>
+                                                            {[
+                                                                { path: "/student-wallet/wallet", name: "Wallet" },
+                                                                { path: "/student-wallet/wallet-history", name: "Wallet History" },
+                                                            ].map((item) => (
+                                                                <NavLink
+                                                                    key={item.path}
+                                                                    to={item.path}
+                                                                    className={({ isActive }) =>
+                                                                        cn(
+                                                                            "submenu-link block rounded-md px-3 py-2 text-sm transition-all",
+                                                                            isActive || isSubActive(item.path)
+                                                                                ? "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                                                                                : "text-gray-600 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-blue-400",
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    {item.name}
+                                                                </NavLink>
+                                                            ))}
+                                                        </>
+                                                    )}
+
+                                                    {/* 🏦 Bank Info Dropdown */}
+
+                                                    {dropdownKey === "bankInfo" && (
+                                                        <>
+                                                            {[
+                                                                { path: "/bank-info/bank", name: "Bank" },
+                                                                { path: "/bank-info/account-type", name: "Account Type" },
+                                                                { path: "/bank-info/account-list", name: "Account List" },
+                                                                { path: "/bank-info/passbook", name: "Passbook" },
+                                                                { path: "/bank-info/passbook-report", name: "Passbook Report" },
+                                                            ].map((item) => (
+                                                                <NavLink
+                                                                    key={item.path}
+                                                                    to={item.path}
+                                                                    className={({ isActive }) =>
+                                                                        cn(
+                                                                            "submenu-link block rounded-md px-3 py-2 text-sm transition-all",
+                                                                            isActive || isSubActive(item.path)
+                                                                                ? "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                                                                                : "text-gray-600 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-blue-400",
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    {item.name}
+                                                                </NavLink>
+                                                            ))}
+                                                        </>
+                                                    )}
+
+                                                    {/* 📊 Report Dropdown */}
+
+                                                    {dropdownKey === "report" && (
+                                                        <>
+                                                            {[
+                                                                { path: "/report/transaction-report", name: "Transaction Report" },
+                                                                { path: "/report/activity-log", name: "Activity Log" },
+                                                                { path: "/report/document-availability", name: "Document Availability" },
+                                                                { path: "/report/app-login-status", name: "App Login Status" },
+                                                            ].map((item) => (
+                                                                <NavLink
+                                                                    key={item.path}
+                                                                    to={item.path}
+                                                                    className={({ isActive }) =>
+                                                                        cn(
+                                                                            "submenu-link block rounded-md px-3 py-2 text-sm transition-all",
+                                                                            isActive || isSubActive(item.path)
+                                                                                ? "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                                                                                : "text-gray-600 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-blue-400",
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    {item.name}
+                                                                </NavLink>
+                                                            ))}
+                                                        </>
+                                                    )}
+
+                                                    {/* 🖥️ Front CMS Dropdown */}
+
+                                                    {dropdownKey === "frontCMS" && (
+                                                        <>
+                                                            {[
+                                                                { path: "/frontcms/events", name: "Events" },
+                                                                { path: "/frontcms/gallery", name: "Gallery" },
+                                                                { path: "/frontcms/notice", name: "Notice" },
+                                                                { path: "/frontcms/media-manager", name: "Media Manager" },
+                                                                { path: "/frontcms/pages", name: "Pages" },
+                                                                { path: "/frontcms/menus", name: "Menus" },
+                                                                { path: "/frontcms/banner-image", name: "Banner Image" },
+                                                                { path: "/frontcms/testimonials", name: "Testimonials" },
+                                                            ].map((item) => (
+                                                                <NavLink
+                                                                    key={item.path}
+                                                                    to={item.path}
+                                                                    className={({ isActive }) =>
+                                                                        cn(
+                                                                            "submenu-link block rounded-md px-3 py-2 text-sm transition-all",
+                                                                            isActive || isSubActive(item.path)
+                                                                                ? "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                                                                                : "text-gray-600 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-blue-400",
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    {item.name}
+                                                                </NavLink>
+                                                            ))}
+                                                        </>
+                                                    )}
+
+                                                    {/* Subscription */}
+
+                                                    {dropdownKey === "subscription" && (
+                                                        <>
+                                                            {[
+                                                                { path: "/subscription/installment-report", name: "Subscription Installment Report" },
+                                                            ].map((item) => (
+                                                                <NavLink
+                                                                    key={item.path}
+                                                                    to={item.path}
+                                                                    className={({ isActive }) =>
+                                                                        cn(
+                                                                            "submenu-link block rounded-md px-3 py-2 text-sm transition-all",
+                                                                            isActive || isSubActive(item.path)
+                                                                                ? "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300"
+                                                                                : "text-gray-600 hover:bg-gray-100 hover:text-blue-600 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-blue-400",
+                                                                        )
+                                                                    }
+                                                                >
+                                                                    {item.name}
+                                                                </NavLink>
+                                                            ))}
+                                                        </>
+                                                    )}
+
+                                                    {/* System Setting */}
+
+                                                    {dropdownKey === "systemsetting" && (
+                                                        <>
+                                                            {[
+                                                                { path: "/system-setting/custom-columns", name: "Custom Columns" },
+                                                                { path: "/system-setting/document-master", name: "Document Master" },
+                                                                { path: "/system-setting/session-setting", name: "Session Setting" },
+                                                                { path: "/system-setting/school-times", name: "School Times" },
+                                                                { path: "/system-setting/referral-setting", name: "Referral Setting" },
+                                                                { path: "/system-setting/template-setting", name: "Template Setting" },
+                                                                { path: "/system-setting/staff-time-slots", name: "Staff Time Slots" },
+                                                                { path: "/system-setting/communication-setting", name: "Communication Setting" },
+                                                                { path: "/system-setting/biometric-setup", name: "Biometric Setup" },
+                                                                { path: "/system-setting/payment-setting", name: "Payment Setting" },
+                                                                { path: "/system-setting/frontcms-setting", name: "Front CMS Setting" },
+                                                                { path: "/system-setting/student-delete", name: "Student Delete" },
+                                                                { path: "/system-setting/users", name: "Users" },
                                                             ].map((item) => (
                                                                 <NavLink
                                                                     key={item.path}
